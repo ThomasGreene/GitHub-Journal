@@ -1,0 +1,28 @@
+{
+"journalEntries": [
+{
+    "date": "05/29/2019",
+    "concept": "functions",
+    "entry": "we started the basics of functions. Not worried about where I'm at today since a lot was review from prework.",
+    "mood": "happy"
+},
+{
+    "date": "06/04/2019",
+    "concept": "objects representing things",
+    "entry": "by far the most difficult thing I've had to learn so far.  Need to get better with for loops and if statements.",
+    "mood": "frustrated"
+},
+{
+    "date": "06/05/2019",
+    "concept": "functions",
+    "entry": "started working with JSON and Postman. Need to review previous chapters up to this point.",
+    "mood": "happy"
+},
+{
+    "date": "06/07/2019",
+    "concept": "fetching data and handling browser events",
+    "entry": "need to practice these concepts more.  Starting to obtain some clarity regarding this whole process.",
+    "mood": "happy"
+}
+]
+}
