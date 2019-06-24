@@ -1,33 +1,24 @@
-fetch("http://localhost:3000/journalEntries") // Fetch from the API
-    .then(entries => entries.json())  // Parse as JSON
-    .then( entry => {
-        // What should happen when we finally have the array?
-        for (let i = 0; i < entry.length; i++) {
-            entryContainer.innerHTML += makeJournalEntryComponent (
-                entry[i].date,
-                entry[i].concept,
-                entry[i].entry,
-                entry[i].mood
-            )
+// import { API } from "./data.js";
+
+API.getJournalEntries().then((entries) => renderJournalEntries(entries));
+
+document.querySelector("#recordEntry").addEventListener("click", () => {
+        let date = document.getElementById("journalDate").value 
+        let concept = document.getElementById("conceptsCovered").value
+        let journalEntry = document.getElementById("entries").value
+        let mood = document.getElementById("mood").value
+        const newJournalEntry = createJournalEntry(date, concept, journalEntry, mood)
+        if (date && concept && journalEntry && mood) {
+                API.saveJournalEntry(newJournalEntry);
+                API.getJournalEntries().then((entries) => renderJournalEntries(entries))
         }
-    })
+})
 
-// Purpose: To create, and return, a string template that
-// represents a single journal entry object as HTML
-
-// Arguments: journalEntry (object)
-
-const makeJournalEntryComponent = (date, concept, entry, mood) => {
-// Create your own HTML structure for a journal entry
-    return `
-    <p>
-    ${date} we learned about ${concept} and other notes include 
-    ${entry} and I was feeling ${mood}
-    </p> `;
+function createJournalEntry(date, concept, entry, mood) {
+        return {
+        date: date,
+        concept: concept,
+        entry: entry,
+        mood: mood
+        };
 }
-
-// Purpose: To render all journal entries to the DOM
-
-// Arguments: entries (array of objects)
-
-let entryContainer = document.querySelector(".entryLog")
