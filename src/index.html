@@ -11,29 +11,32 @@
 <body>
     <form action="">
         <fieldset>
-            <label for="Journal Date">Date of Entry</label>
+            <label for="journalDate">Date of Entry</label>
             <input type="date" name="journalDate" id="journalDate">
             <br>
-            <label for="Concepts Covered">Concepts Covered</label>
+            <label for="conceptsCovered">Concepts Covered</label>
             <input type="text" name="conceptsCovered" id="conceptsCovered">
             <br>
-            <label for="Journal Entry">Journal Entry</label>
-            <textarea rows="3" cols="30"></textarea>
+            <label for="journalEntry">Journal Entry</label>
+            <input type="text" name="journalEntry" id="entries">
             <br>
-            <label for="Mood for the Day">Mood for the Day</label>
+            <label for="mood">Mood for the Day</label>
             <label>
-                    <select>
-                        <option selected>Happy</option>
-                        <option>Sad</option>
-                        <option>Frustrated</option>
+                    <select id="mood">
+                        <option value="Happy" selected>Happy</option>
+                        <option value="Meh">Meh</option>
+                        <option value="Frustrated">Frustrated</option>
                     </select>
             </label>
             <br>
             <label for="Record Journal Entry"></label>
-            <input type="submit" name="recordEntry" id="recordEntry" value="Record Journal Entry">
         </fieldset>
     </form>
+    <button id="recordEntry">Submit</button>
     <article class="entryLog"></article>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/entryComponent.js"></script>
+    <script src="scripts/entriesDOM.js"></script>
     <script src="scripts/journal.js"></script>
 </body>
 </html>
