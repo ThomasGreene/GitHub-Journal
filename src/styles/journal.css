@@ -6,3 +6,13 @@ fieldset {
 body {
     background-color: lightblue;
 }
+
+#radioContainer {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;  
+}
+
+#recordEntry {
+    margin: 10px
+}

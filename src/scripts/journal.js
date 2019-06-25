@@ -22,3 +22,16 @@ function createJournalEntry(date, concept, entry, mood) {
         mood: mood
         };
 }
+
+const radioButton = document.getElementsByName('radioButton');
+
+for (var i = 0; i < radioButton.length; i++) {
+    radioButton[i].addEventListener('click', event => {
+        console.log('event: ', event.target.value);
+        const mood = event.target.value;
+        API.getJournalEntries().then((entries) => {
+                const filteredEntries = entries.filter((entry) => entry.mood === mood)
+                return renderJournalEntries(filteredEntries);
+        })
+    })
+}

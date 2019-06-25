@@ -21,18 +21,26 @@
             <input type="text" name="journalEntry" id="entries">
             <br>
             <label for="mood">Mood for the Day</label>
-            <label>
                     <select id="mood">
                         <option value="Happy" selected>Happy</option>
                         <option value="Meh">Meh</option>
                         <option value="Frustrated">Frustrated</option>
                     </select>
-            </label>
+                    <br>
+            <label for="mood">Filter Mood for the Day</label>
+            <fieldset>
+                <div id=radioContainer>
+                    <input name="radioButton" type="radio" id="Happy" value="happy" /><label>Happy</label>
+                    <input name="radioButton" type="radio" id="Frustrated" value="frustrated" /><label>Frustrated</label>
+                    <input name="radioButton" type="radio" id="Meh" value="meh" /><label>Meh</label>
+                </div>
+                <button id="recordEntry">Submit</button>
+            </fieldset>
             <br>
             <label for="Record Journal Entry"></label>
         </fieldset>
     </form>
-    <button id="recordEntry">Submit</button>
+    
     <article class="entryLog"></article>
     <script src="scripts/data.js"></script>
     <script src="scripts/entryComponent.js"></script>
