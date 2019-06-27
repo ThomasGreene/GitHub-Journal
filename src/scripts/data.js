@@ -17,3 +17,13 @@ return fetch ("http://localhost:8088/journalEntries", {
     })
     }
 }
+
+// delete the journal entry json data 
+//     function deleteJournal(id) {
+//         return fetch(`http://localhost:8088/entries/${id}`, {
+//           method: "DELETE",
+//           headers:{
+//             "Content-Type": "application/json"
+//           }
+//         })
+//     }

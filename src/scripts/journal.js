@@ -14,6 +14,11 @@ document.querySelector("#recordEntry").addEventListener("click", () => {
         }
 })
 
+const deleteTest = document.querySelector("#deleteBtn");
+deleteTest.addEventListener("click", (deleteEntry) => {
+        console.log(deleteEntry)
+})
+
 function createJournalEntry(date, concept, entry, mood) {
         return {
         date: date,
@@ -22,6 +27,7 @@ function createJournalEntry(date, concept, entry, mood) {
         mood: mood
         };
 }
+
 
 const radioButton = document.getElementsByName('radioButton');
 
