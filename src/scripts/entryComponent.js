@@ -9,6 +9,7 @@ const makeJournalEntryComponent = (journalEntry) => {
                 ${journalEntry.entry} and I was feeling ${journalEntry.mood}
                 </p> 
                 <button id="${journalEntry.id}" class="deleteBtn">Delete</button>
+                <button id="${journalEntry.id}" class="editBtn">Save</button>
         </div>
         `;
 }
