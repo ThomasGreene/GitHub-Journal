@@ -23,5 +23,15 @@ const API = {
                 "Content-Type": "application/json"
             }
             })
+        },
+        editEntry(updatedJournalEntry, id) {
+          return fetch(`http://localhost:8088/journalEntries/${id}`, {
+              method: "PUT",
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: JSON.stringify(updatedJournalEntry)
+          })
+          .then(res => res.json())
         }
 }

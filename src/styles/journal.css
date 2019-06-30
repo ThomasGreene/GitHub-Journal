@@ -16,3 +16,11 @@ body {
 #recordEntry {
     margin: 10px
 }
+
+.editJournalEntry {
+    display: none;
+}
+
+.saveBtn {
+    margin: 4px;
+}

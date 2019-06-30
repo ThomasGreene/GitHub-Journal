@@ -1,12 +1,18 @@
 {
   "journalEntries": [
-    
     {
-      "date": "2019-06-27",
+      "date": "2019-06-28",
       "concept": "JS - deleting data",
-      "entry": "Wow.  This is frustrating.",
+      "entry": "Finished delete button.  Starting group project #3 today.",
       "mood": "Frustrated",
-      "id": 7
+      "id": 8
+    },
+    {
+      "date": "2019-06-30",
+      "concept": "JS - edit button",
+      "entry": "Finishing Journal #9",
+      "mood": "Happy",
+      "id": 9
     }
   ]
 }
