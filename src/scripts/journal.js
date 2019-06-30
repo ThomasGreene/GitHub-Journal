@@ -3,6 +3,8 @@
 API.getJournalEntries().then((entries) => {
         renderJournalEntries(entries);
         addDeleteListener();
+        addEditListener();
+        addSaveListener();
 })
 // make a function that gets all entry delete buttons out of DOM.  
 // Get all delete buttons out of DOM an loop thorugh them and attach event listener to each one with functionality to delete each entry. 
